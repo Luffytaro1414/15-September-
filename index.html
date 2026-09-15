@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>কলমটা আজ পিছলাবে না — ১৫ সেপ্টেম্বর ২০২৬</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&family=Special+Elite&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--bg:#090807;--paper:#e7d3a8;--ink:#241b12;
+--muted:#806b4d;--gold:#b99a63
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+min-height:100vh;
+background:radial-gradient(circle at 50% 35%,#29231b 0,#0e0c09 40%,#050504 100%);
+color:#ddd;overflow-x:hidden;
+font-family:"Noto Serif Bengali",serif
+}
+body:before{
+content:"";position:fixed;inset:0;z-index:30;pointer-events:none;
+background:radial-gradient(ellipse at center,transparent 42%,rgba(0,0,0,.72))
+}
+.stars,.dust{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.star{
+position:absolute;width:2px;height:2px;border-radius:50%;
+background:#d8c9a4;opacity:.45;
+animation:twinkle 3s infinite alternate
+}
+.dust span{
+position:absolute;width:3px;height:3px;border-radius:50%;
+background:#c9aa72;opacity:.12;
+animation:float 12s linear infinite
+}
+@keyframes twinkle{to{opacity:.08;transform:scale(.4)}}
+@keyframes float{
+to{transform:translateY(-110vh) translateX(30px);opacity:0}
+}
+.moon{
+position:fixed;top:7%;right:9%;width:90px;height:90px;border-radius:50%;
+background:#ddd0ad;opacity:.8;
+box-shadow:0 0 50px rgba(220,205,165,.12)
+}
+.moon:after{
+content:"";position:absolute;width:90px;height:90px;border-radius:50%;
+background:#0b0a08;left:25px;top:-7px
+}
+.wrap{
+position:relative;z-index:2;width:min(900px,92%);
+margin:auto;padding:55px 0 70px
+}
+.head{text-align:center;margin-bottom:42px}
+.eyebrow{
+font:13px "Special Elite";letter-spacing:4px;
+color:#a48b61;margin-bottom:14px
+}
+h1{
+font:600 clamp(32px,6vw,60px) "Noto Serif Bengali";
+color:#e4d3ad;text-shadow:0 3px 20px #000
+}
+.date{
+margin-top:10px;color:#927b56;
+font:15px "Playfair Display";letter-spacing:2px
+}
+.envelope{
+position:relative;width:min(620px,94vw);height:370px;
+margin:0 auto;cursor:pointer;perspective:1200px;
+filter:drop-shadow(0 25px 35px #000)
+}
+.env{
+position:absolute;inset:55px 0 0;background:#b89461;
+border:1px solid #6e5433;overflow:hidden
+}
+.env:before{
+content:"";position:absolute;inset:0;
+background:repeating-linear-gradient(
+0deg,transparent 0 5px,rgba(70,45,20,.035) 6px)
+}
+.fold1,.fold2,.flap{
+position:absolute;background:#c9a875;z-index:2
+}
+.fold1{
+left:0;bottom:0;width:52%;height:70%;
+clip-path:polygon(0 100%,100% 100%,0 0)
+}
+.fold2{
+right:0;bottom:0;width:52%;height:70%;
+clip-path:polygon(100% 100%,0 100%,100% 0)
+}
+.flap{
+top:0;left:0;width:100%;height:58%;
+clip-path:polygon(0 0,100% 0,50% 100%);
+transform-origin:top;
+transition:1s;backface-visibility:hidden;
+border-bottom:1px solid #87663e
+}
+.address{
+position:absolute;left:34px;top:108px;z-index:8;
+color:#382716;font:17px "Noto Serif Bengali";
+line-height:1.8
+}
+.address small{font-size:12px;color:#725638}
+.stamp{
+position:absolute;right:28px;top:76px;z-index:9;
+width:75px;height:85px;border:2px dashed #674d2f;
+display:grid;place-items:center;color:#674d2f;
+font:11px "Special Elite";transform:rotate(4deg);
+text-align:center
+}
+.seal{
+position:absolute;left:50%;bottom:35px;transform:translateX(-50%);
+z-index:10;width:55px;height:55px;border-radius:50%;
+background:#6d3525;border:3px solid #4c2319;
+box-shadow:0 5px 12px #000;color:#d9b987;
+display:grid;place-items:center;font-size:23px;
+transition:.3s
+}
+.envelope.open .flap{transform:rotateX(180deg)}
+.envelope.open .seal{opacity:0}
+.openhint{
+text-align:center;margin-top:-18px;color:#816d4d;
+font:12px "Special Elite";letter-spacing:2px;opacity:.8
+}
+.letter{
+display:none;width:min(760px,94vw);margin:45px auto 0;
+padding:55px 7%;position:relative;color:var(--ink);
+background:
+linear-gradient(rgba(255,255,255,.06),rgba(0,0,0,.03)),
+var(--paper);
+box-shadow:0 20px 55px #000,0 0 0 8px rgba(91,62,31,.12);
+transform:translateY(25px);opacity:0
+}
+.letter:before{
+content:"";position:absolute;inset:12px;
+border:1px solid rgba(76,51,25,.28);
+pointer-events:none
+}
+.letter:after{
+content:"";position:absolute;inset:0;pointer-events:none;
+opacity:.25;
+background:repeating-linear-gradient(
+0deg,transparent 0 4px,rgba(60,35,10,.035) 5px)
+}
+.letter.show{
+display:block;animation:paperIn .9s forwards
+}
+@keyframes paperIn{to{transform:none;opacity:1}}
+.topline{
+position:relative;z-index:2;text-align:center;
+color:#765c3a;font:11px "Special Elite";
+letter-spacing:3px;margin-bottom:35px
+}
+.salute{
+position:relative;z-index:2;
+font-size:22px;margin-bottom:25px;font-weight:600
+}
+.content{
+position:relative;z-index:2;
+font-size:18px;line-height:2.05
+}
+.content p{margin:0 0 24px}
+.memory{
+margin:38px 0;padding:15px 10px;text-align:center;
+border-top:1px solid #927750;border-bottom:1px solid #927750;
+font:11px "Special Elite";letter-spacing:3px;color:#755b3a
+}
+.quote{
+margin:30px 5%;padding:20px 25px;
+border-left:3px solid #92734b;
+font-style:italic;background:rgba(116,82,39,.07)
+}
+.last{
+margin-top:40px;padding-top:25px;
+border-top:1px solid #9b8057;
+font-size:22px;font-weight:600;text-align:center
+}
+.end{
+text-align:center;margin-top:45px;
+font-size:17px;color:#725b3d;line-height:2
+}
+.footer{
+margin-top:35px;text-align:center;
+font:10px "Special Elite";letter-spacing:2px;color:#88704e
+}
+.close{
+display:block;margin:35px auto 0;
+border:1px solid #806542;background:transparent;
+color:#604a2f;padding:10px 25px;cursor:pointer;
+font:12px "Special Elite"
+}
+.close:hover{background:#d2ba8d}
+
+@media(max-width:600px){
+.wrap{padding-top:35px}
+.moon{width:60px;height:60px;right:5%}
+.moon:after{width:60px;height:60px;left:17px}
+.envelope{height:310px}
+.env{top:45px}
+.address{left:20px;top:92px;font-size:14px}
+.stamp{right:18px;top:62px}
+.letter{padding:42px 8%}
+.content{font-size:16px;line-height:1.95}
+.salute{font-size:19px}
+.last{font-size:19px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+<div class="dust" id="dust"></div>
+<div class="moon"></div>
+
+<main class="wrap">
+
+<header class="head">
+<div class="eyebrow">LETTER No. 14 · THE PEN TRIES AGAIN</div>
+<h1>কলমটা আজ পিছলাবে না</h1>
+<div class="date">১৫ সেপ্টেম্বর, ২০২৬</div>
+</header>
+
+<section>
+<div class="envelope" id="env" aria-label="চিঠি খুলুন">
+
+<div class="env">
+<div class="flap"></div>
+<div class="fold1"></div>
+<div class="fold2"></div>
+
+<div class="address">
+প্রাপক: My Mushroom🍄<br>
+<small>তাকে — যে হয়তো জানেই না</small>
+</div>
+
+<div class="stamp">
+15<br>SEP<br>2026
+</div>
+
+<div class="seal">✉</div>
+</div>
+</div>
+
+<div class="openhint">
+CLICK THE ENVELOPE · OPEN THE LETTER
+</div>
+</section>
+
+
+<article class="letter" id="letter">
+
+<div class="topline">
+VINTAGE POSTAL ARCHIVE · 15 SEPTEMBER 2026
+</div>
+
+<div class="salute">
+প্রিয় Mushroom🍄...
+</div>
+
+<div class="content">
+
+<p>
+কাল কলমটা লিখতে লিখতে
+একটু পিছলে গিয়েছিল।
+</p>
+
+<p>
+আজ কলম চেষ্টা করবে—
+আর পিছলাবে না।
+</p>
+
+<p>
+জানি,
+এই চিঠিটা তোর পড়ার সম্ভাবনা
+হয়তো খুবই কম।
+</p>
+
+<p>
+আর পড়লেও
+হয়তো এতটা দূর পর্যন্ত
+পড়ে আসবি না।
+</p>
+
+<p>
+তবুও আমার কলম
+আজ কিছু কথা বলতে চায়।
+</p>
+
+<p>
+আমার মনের সব কথা
+সরাসরি বলতে ইচ্ছে করে না।
+</p>
+
+<p>
+হয়তো এই চিঠিগুলোই
+একদিন কোনো প্রশ্নের উত্তর হয়ে থাকবে।
+</p>
+
+<p>
+হয়তো কোনো এক রাতে,
+কয়েক বছর পর,
+হঠাৎ করে তুই এই চিঠিগুলো খুলে পড়বি।
+</p>
+
+<p>
+আর যদি সেদিনও মনে হয়—
+আমি কোনোভাবে
+তোর জীবনের পাশে থাকার মতো
+একজন মানুষ হতে পেরেছি,
+</p>
+
+<p>
+তাহলে কোনো উত্তর
+বাধ্যতামূলক নয়।
+</p>
+
+<div class="quote">
+একটা ছোট্ট message-ই যথেষ্ট।
+</div>
+
+<p>
+আর যদি তা না হয়,
+তবুও কোনো অভিযোগ থাকবে না।
+</p>
+
+<p>
+কারণ মানুষকে ভালোবাসা মানেই
+তাকে নিজের কাছে পাওয়ার অধিকার
+পাওয়া নয়।
+</p>
+
+<p>
+ভালোবাসা মানে শুধুমাত্র সে আমর জন্যে 
+</p>
+
+<div class="memory">
+LEARNING TO UNDERSTAND
+</div>
+
+<p>
+আমি জানতাম,
+বারবার জানতাম—
+তোকে পাওয়ার যোগ্য আমি না।
+</p>
+
+<p>
+মাথা অনেক হিসাব করত।
+</p>
+
+<p>
+মন কোনো হিসাবই মানত না।
+</p>
+
+<p>
+মনকে বোঝানোর মতো
+ক্ষমতা আমার মধ্যে ছিল না।
+</p>
+
+<p>
+তাই এখন একটা কাজই করতে পারি—
+নিজেকে আরও ভালো করে
+গড়ে তুলতে পারি।
+</p>
+
+<p>
+তোর জন্য নয় শুধু,
+নিজের জন্যও।
+</p>
+
+<p>
+হয়তো আমাদের যতবার দেখা হয়েছে,
+আমি সেগুলোকে
+“universe-এর ইশারা” বলে ভেবেছি।
+</p>
+
+<p>
+হয়তো সত্যিই কোনো অর্থ ছিল।
+</p>
+
+<p>
+আবার হয়তো
+আমি শুধু তোকে পাওয়ার আশায়
+সেই ঘটনাগুলোর মধ্যে
+অর্থ খুঁজেছি।
+</p>
+
+<p>
+কে জানে?
+</p>
+
+<p>
+Universe-এর হয়ে উত্তর দেওয়ার
+ক্ষমতা আমার নেই। :)
+</p>
+
+<p>
+শুধু জানি,
+তোকে আমি ইতিমধ্যে
+দু'বার হারিয়েছি।
+</p>
+
+<p>
+তৃতীয়বার হারালে
+কষ্ট কী হবে  ?
+</p>
+
+<p>
+হবে।
+</p>
+
+<p>
+হয়তো খুব হবে।
+হয়তো না 😂
+কিন্তু এটা তো মানতে হবে তোর ex দের list আমি সবচেয়ে নিচেই rank করবো 😂
+আমার তো যোগ্যতাই ছিল না maybe reservation এর জন্যে 
+seat পেয়েছিলাম 😂 . but reservation শুধু gate open করে দেয় 😂
+and আমি fail করেছি যেটা আমি পেয়েছিলাম আমার যোগ্যতা ছাড়া
+সেটা ধরে রাখতে 👽
+আমি তো নিজেই নিজেকে choose করব না 😊
+</p>
+
+<div class="memory">
+SOME DISTANCES ARE CHOSEN
+</div>
+
+<p>
+কিন্তু তোর সামনে এখন
+আর একটা বড় জিনিস আছে।
+</p>
+
+<p>
+তোর ভবিষ্যৎ।
+</p>
+
+<p>
+তোর পরীক্ষা।
+</p>
+
+<p>
+তোর নিজের জীবন।
+</p>
+
+<p>
+আর সেই জায়গায় দাঁড়িয়ে
+আমি নিজের কষ্টকে
+তোর ওপর চাপিয়ে দিতে পারি না
+who knows 
+maybe তোর exam না হলে তোকে আরেকবার ভিক্ষা চাইতাম 
+আমার তো মনে হয় bhogoban টেস্ট করছিলো 
+দেখার জন্যে যে আমি capable কিনা 
+universe এর সবচেয়ে দামি জিনিস সামলে রাখার জন্য 
+তৈরী কিনা 😊 
+maybe someone better than me is waiting for you 
+universe test নিতে থাকে 
+আর আমি text খারাপ ই যায় 😂
+</p>
+
+<p>
+
+তাই তোকে রোজ দেখতে ইচ্ছে করলেও
+আমি দূরত্বটাকে মেনে নিচ্ছি।
+</p>
+
+<p>
+কারণ এই দূরত্বটা
+আমিই বেছে নিয়েছি।
+</p>
+
+<p>
+হয়তো এই পথটা অনেক লম্বা। 1000km😂
+</p>
+
+<p>
+তবুও হাঁটতে হবে।
+
+</p>
+
+<p>
+জানিস,
+আমি 
+ভীষণ replaceable । 😂
+</p>
+
+<p>
+আমার জীবনে মানুষ আসে,
+কিছুদিন থাকে,
+তারপর দূরে চলে যায়।
+</p>
+
+<p>
+জানিস জানিস 
+funny incident 😂
+আমি ভাবলাম,
+যাওয়ার আগে আমার
+সব বন্ধুদের একটা message দিই।
+</p>
+
+<p>
+তাই সবাইকে message করলাম।
+</p>
+
+<p>
+Guess what?
+</p>
+
+<p>
+খবর নিল মাত্র চারজন।
+</p>
+
+<p>
+আর সেই চারজনের মধ্যে
+2 to নাম তুই 
+ঠিক ধরে ফেলতে পারবি। 😂
+কিন্তু বাকি?  পারবি না hoyto তোর প্রথম guess ই ভুল হয়ে গেলো 
+who knows 
+</p>
+
+<p>
+বাকিরা?
+</p>
+
+<p>
+message-ও করেনি।
+</p>
+
+<p>
+তখন একটা অদ্ভুত প্রশ্ন
+মাথায় এলো—
+</p>
+
+<div class="quote">
+মানুষের best friend
+আসলে কত বছর best friend থাকে?
+</div>
+
+<p>
+আমি যদি কাউকে একবার
+best friend বলে ফেলি,
+কেন জানি সে-ই
+একদিন আমার থেকে দূরে চলে যায়। 😂
+</p>
+
+<p>
+হয়তো সমস্যা আমার মধ্যেই আছে।
+</p>
+
+<p>
+হয়তো না এটাই সত্যি ☺️
+</p>
+
+<div class="memory">
+THE THINGS WE DON'T SAY
+</div>
+
+<p>
+জানি না কেন আজ
+এসব কথা লিখছি।
+</p>
+
+<p>
+হয়তো আমার কলম জানে—
+তুই এগুলো পড়বি না।
+</p>
+
+<p>
+আর সত্যি বলতে,
+আমি নিজেও
+নিজের emotions ঠিকমতো
+কখনো প্রকাশ করতে পারিনি।
+</p>
+
+<p>
+আমারও হয়তো
+একটু experience দরকার ছিল।
+</p>
+
+<p>
+সেই experience আমি পেয়েছি।
+</p>
+
+<p>
+ভুল থেকে শিখেছি।
+</p>
+
+<p>
+কিছু মানুষকে হারিয়ে শিখেছি।
+</p>
+
+<p>
+কিছু কথা না বলতে পেরে শিখেছি।
+</p>
+
+<p>
+আর হয়তো কোনোদিন
+জীবন আমাকে আবার
+তোকে নিজের খুব কাছের
+মানুষ করে নেওয়ার সুযোগ দিলে,
+জীবন আমাকে অনেক সুযোগ দিয়েছে আমি অবহেলা করেছি 
+তুই ভেবে দেখ তোর আমরা দেখা হওয়ার fate ছাড়া কি ছিলো? 
+না কি আমি তোকে আবার পাওয়ার জন্য fate এর reason দিচ্ছি 
+</p>
+
+<p>
+
+এবার আমি আরও ভালোভাবে
+তোর পাশে থাকতে চাইব।
+</p>
+
+<p>
+“যদি” দিয়ে জীবন চলে না।
+</p>
+
+<p>
+তাই ভবিষ্যৎ নিয়ে
+বড় কোনো প্রতিশ্রুতিও দিতে চাই না।
+</p>
+
+<p>
+শুধু একটা কথা বলতে পারি—
+</p>
+
+<div class="quote">
+আজকের আমি গতকালের সেই বাচ্চাটা নই।
+</div>
+
+<p>
+সে ভুল করেছে।
+সে কথায় কথায় কান্না করত 
+আমি করি না 😂😵
+</p>
+
+<p>
+সে অনেক কিছু বুঝতে পারেনি।
+</p>
+
+<p>
+আর আজকের আমি
+সেই ভুলগুলো থেকে
+শিখতে চাই।
+</p>
+
+<div class="memory">
+WORDS THAT STAY INSIDE
+</div>
+
+<p>
+কখনো কখনো ইচ্ছে করে
+তোকে খুব সহজ কিছু কথা বলি—
+</p>
+
+<p>
+“I love you.”
+</p>
+
+<p>
+“Baby.”
+</p>
+
+<p>
+“Darling.”
+</p>
+
+<p>
+“Everything.”
+</p>
+
+<p>
+কিন্তু কিছু শব্দেরও
+একটা সময় থাকে,
+একটা জায়গা থাকে।
+</p>
+
+<p>
+আমি সেই জায়গাটা
+হয়তো আর নিজের বলে
+দাবি করতে পারি না।
+</p>
+
+<p>
+তাই কথাগুলো
+আজও আমার কলমের মধ্যেই থাকে।
+</p>
+
+<p>
+আর হয়তো এটাই
+এই চিঠিগুলোর সবচেয়ে সত্যি দিক।
+</p>
+
+<p>
+আমি জানিই না
+next life বলে কিছু আছে কি না।
+</p>
+
+<p>
+তবুও যদি সত্যিই থাকে—
+</p>
+
+<p>
+তাহলে আমি চাইব,
+পরের জীবনে আমরা মধ্যে তোকে পাওয়া এর জন্যে 
+যা quality.  looks everything সব 
+নিয়ে জন্ম গ্রহণ করতে।
+</p>
+
+<p>
+আর যদি কোনোদিন
+জীবন আবার আমাদের
+একই রাস্তায় এনে দাঁড় করায়—
+</p>
+
+<p>
+তখন যেন
+আজকের এই ভুলগুলো
+আমার সঙ্গে না থাকে।
+</p>
+
+<div class="last">
+যাই হোক।
+</div>
+
+<p>
+আজ আবার গল্প থেকে
+অনেকটা দূরে চলে গেল
+আমার কলম।
+</p>
+
+<p>
+ক্ষমা করিস।
+</p>
+
+<p>
+আজকের চিঠিটা
+হয়তো গল্পের অংশ ছিল না।
+</p>
+
+<p>
+হয়তো এটা শুধু
+একটা কলমের
+নিজের কাছে স্বীকারোক্তি।
+</p>
+
+<p class="end">
+আজ কলমটা থামছে।<br><br>
+কাল আবার
+পুরোনো গল্পের কাছে ফিরব।<br><br>
+হয়তো সেখানে
+আবার সেই বাচ্চাটাকে পাওয়া যাবে।<br><br>
+আর হয়তো—
+<br>
+সে তখনও
+কোনো একটা কাল-এর অপেক্ষায় থাকবে।
+</p>
+
+<div class="footer">
+— ১৫ সেপ্টেম্বর, ২০২৬ · চিঠি নং — ১৪<br><br>
+THE PEN STUMBLED. THE STORY DIDN'T.
+</div>
+
+</div>
+
+<button class="close" id="close">
+CLOSE LETTER
+</button>
+
+</article>
+</main>
+
+<script>
+const S=document.getElementById("stars");
+const D=document.getElementById("dust");
+const E=document.getElementById("env");
+const L=document.getElementById("letter");
+const C=document.getElementById("close");
+
+for(let i=0;i<65;i++){
+let x=document.createElement("i");
+x.className="star";
+x.style.left=Math.random()*100+"%";
+x.style.top=Math.random()*100+"%";
+x.style.animationDelay=Math.random()*4+"s";
+S.appendChild(x);
+}
+
+for(let i=0;i<22;i++){
+let x=document.createElement("span");
+x.style.left=Math.random()*100+"%";
+x.style.top=70+Math.random()*40+"%";
+x.style.animationDelay=Math.random()*10+"s";
+x.style.animationDuration=8+Math.random()*9+"s";
+D.appendChild(x);
+}
+
+E.onclick=()=>{
+if(E.classList.contains("open"))return;
+E.classList.add("open");
+
+setTimeout(()=>{
+L.classList.add("show");
+L.scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+},850);
+};
+
+C.onclick=()=>{
+L.classList.remove("show");
+
+setTimeout(()=>{
+E.classList.remove("open");
+E.scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+},350);
+};
+
+document.addEventListener("keydown",e=>{
+if(e.key==="Escape"&&L.classList.contains("show"))C.click();
+if(e.key==="Enter"&&!L.classList.contains("show"))E.click();
+});
+</script>
+
+</body>
+</html>
